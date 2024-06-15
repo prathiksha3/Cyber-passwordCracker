@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brute Force Attack</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1.2em; /* Increase overall font size */
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .animated-heading {
+            font-size: 3.5em; /* Increase heading font size */
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p, .breakdown {
+            text-align: left;
+            line-height: 1.8; /* Slightly increase line height */
+            animation: pop 1s ease-in-out;
+        }
+
+        @keyframes pop {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .breakdown {
+            margin-top: 20px;
+        }
+
+        .breakdown strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.4em; /* Increase breakdown strong font size */
+            color: #f39c12;
+        }
+
+        .objective {
+            margin-top: 40px; /* Adds space above the Objective section */
+        }
+        
+        .button {
+            display: inline-block;
+            border-radius: 25px; /* Adjust the value for more or less curvature */
+            background-color: transparent; /* Make background transparent */
+            border: 2px solid #FFFFFF; /* Set border color to white */
+            color: #FFFFFF; /* Change text color to white */
+            text-align: center;
+            font-size: 24px; /* Increase font size */
+            padding: 15px 30px; /* Increase padding */
+            width: 200px; /* Increase width */
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-heading">Introduction</h1>
+        <p>A brute force attack is a way for hackers to try and guess passwords or encryption keys by systematically trying every possible combination until the correct one is found. Imagine you have a lock with a combination code, and someone tries every possible number until the lock opens. That's essentially what a brute force attack does, but with passwords or other secure information.</p>
+        <p>Here's a simple breakdown:</p>
+        <div class="breakdown objective">
+            <strong>Objective:</strong>
+            <p>The hacker wants to gain access to a secured system (like a computer, website, or network).</p>
+        </div>
+        <div class="breakdown">
+            <strong>Method:</strong>
+            <p>They use a computer program to try all possible passwords or keys.</p>
+        </div>
+        <div class="breakdown">
+            <strong>Time-Consuming:</strong>
+            <p>It can take a very long time, especially if the password is long and complex.</p>
+        </div>
+        <div class="breakdown">
+            <strong>Success:</strong>
+            <p>Eventually, if given enough time and resources, the hacker can find the correct password or key.</p>
+        </div>
+        <p>Because brute force attacks can be very time-consuming, strong passwords (with a mix of letters, numbers, and special characters) and other security measures (like account lockout policies after multiple failed attempts) can help protect against them.</p>
+        <button class="button" onclick="goToIndexPage()"><span>Next</span></button>
+    </div>
+
+    <script>
+        function goToIndexPage() {
+            window.location.href = '/index'; // Redirect to index.html
+        }
+    </script>
+</body>
+</html>

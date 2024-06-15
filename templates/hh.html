@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cryptography and Network Security</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-color: #333; /* Set a dark background color for contrast */
+        }
+        
+        .button {
+            display: inline-block;
+            border-radius: 25px; /* Adjust the value for more or less curvature */
+            background-color: transparent; /* Make background transparent */
+            border: 2px solid #FFFFFF; /* Set border color to white */
+            color: #FFFFFF; /* Change text color to white */
+            text-align: center;
+            font-size: 24px; /* Increase font size */
+            padding: 15px 30px; /* Increase padding */
+            width: 200px; /* Increase width */
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="title">
+            <span>Cryptography and Network Security</span>
+            <br>
+            <button class="button" onclick="goToNextPage()"><span>Explore</span></button>
+        </div>
+    </section>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = '/nextpage'; // Redirect to nextpage.html
+        }
+    </script>
+</body>
+</html>
